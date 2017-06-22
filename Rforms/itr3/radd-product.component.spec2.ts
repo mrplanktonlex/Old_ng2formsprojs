@@ -58,6 +58,30 @@ fdescribe("Main suite#1.1", ()=>{
 
 }); //suite #1.1 ends
 
+/*
+Jasmine2.6.4finished in 0.027s
+raise exceptions
+Ran 8 of 9 specs - run all
+8 specs, 0 failures
+Main suite#1.1
+xxx11
+xxx12
+Sub suite#1.2
+1.2.0
+1.2.1
+1.2.2
+1.2.3a
+1.2.3b
+1.2.4
+AddProductComponent
+should be created
+
+
+*/
+
+
+
+
 
 // import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 //
