@@ -13,6 +13,7 @@ THis code wont work without the following in app.module.ts:-
     ...,
     FormsModule]
 After u edit, then do ng serve. 
+NOTE:- this module is also required for ngModel
 
 and now myOnSubmit() will be called.
     
