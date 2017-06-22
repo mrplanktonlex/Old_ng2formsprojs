@@ -22,6 +22,13 @@ fdescribe("Main suite#1.1", ()=>{
         cric_city: [], //'' or [] both work fine
         cric_email: ['', [Validators.required, Validators.email]]
       });
+
+      //VIMP . check these out !!!
+      it("1.2.0", ()=>{
+        let status = cricform instanceof FormGroup ? true : false; //VIMP Check!!!
+        expect(status).toBe(true);
+      });
+
       it("1.2.1", ()=>{
         // console.log(cricform.contains('cric_name').valueOf.name); //doesnt work. skip
         cricform.patchValue({'cric_name': 'anil kumble'});
@@ -31,6 +38,9 @@ fdescribe("Main suite#1.1", ()=>{
         cricform.patchValue({'cric_name': 'kohli'});
         expect(cricform.value.cric_name).toEqual('kohli');
       });
+
+      //VIMP . check these out !!!
+      // use *.controls.ctrlname.* and *.value.ctrlname.* on instances of FormGroup
       it("1.2.3", ()=>{
         cricform.patchValue({'cric_email': 'joker'});
         expect(cricform.controls.cric_email.errors).toBeTruthy(); //invalid email will make error = true
@@ -39,7 +49,7 @@ fdescribe("Main suite#1.1", ()=>{
         cricform.patchValue({'cric_email': 'sherlock@bakerstreet'});
         expect(cricform.controls.cric_email.errors).toBeFalsy(); //correct email will make error = false
       });
-    }); //suite#1.2 ends 
+    }); //suite#1.2 ends
 
 }); //suite #1.1 ends
 
