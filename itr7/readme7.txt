@@ -1,7 +1,8 @@
 this.signupform.setValue({ })
 this.signupform.form.patchValue({ })
+this.signupform.value.<htmlcontrlname>
 
-eg. 
+eg. 1.
 myOnSubmit(formobj){
     console.log(this.signupform);
     // this.signupform.setValue({ })
@@ -19,3 +20,11 @@ myOnSubmit(formobj){
   }
 
 Now, when u click submit, name will be set to default name i.e. Batman
+
+
+eg.2.
+
+  console.log(this.signupform.value.ugender,
+                this.signupform.value.userData.uname,
+                this.signupform.value.userData.uemail
+              );
