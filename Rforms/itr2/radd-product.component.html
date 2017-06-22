@@ -1,0 +1,28 @@
+<div class="form-group">
+<!--  no local refs used -->
+<form [formGroup] = "signupform" (ngSubmit) = myOnSubmit()>
+  <label>Firstname:</label>
+  <input type="text" formControlName="firstname" class="form-control"><br>
+  <label>Lastname:</label>
+  <input type="text" formControlName="lastname" class="form-control"><br>
+  <label>Email:</label>
+  <input type="text" formControlName="email" class="form-control"><br>
+  <label>Address:</label>
+  <input type="text" formControlName="address" class="form-control">
+  <button type="submit">Submit</button>
+</form>
+</div><br>
+<hr>
+<br>
+
+<div class="form-group">
+  <form [formGroup] = "cricform" (ngSubmit)="myCricSubmit()">
+    <label>Cricketer Name:</label>
+    <input type="text" formControlName="cric_name" class="form-control">
+    <label>Cricketer City:</label>
+    <input type="text" formControlName="cric_city" class="form-control">
+    <label>Cricketer Email:</label>
+    <input type="text" formControlName="cric_email" class="form-control">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
