@@ -41,12 +41,17 @@ fdescribe("Main suite#1.1", ()=>{
 
       //VIMP . check these out !!!
       // use *.controls.ctrlname.* and *.value.ctrlname.* on instances of FormGroup
-      it("1.2.3", ()=>{
-        playerform.patchValue({'player_email': 'joker'});
-        expect(playerform.controls.player_email.errors).toBeTruthy(); //invalid email will make error = true
-      });
+        it("1.2.3a", ()=>{
+          playerform.patchValue({'player_email': 'joker'});
+          expect(playerform.controls.player_email.errors).toBeTruthy(); //invalid email will make error = true
+        });
+        it("1.2.3b", ()=>{
+          playerform.patchValue({'player_email': 'djoker djokevic'});
+          expect(playerform.controls.player_email.invalid).toBeTruthy(); //invalid email will make error = true
+        });
+
       it("1.2.4", ()=>{
-        playerform.patchValue({'player_email': 'sherlock@bakerstreet'});
+        playerform.patchValue({'player_email': 'djoker@wimbledon'});
         expect(playerform.controls.player_email.errors).toBeFalsy(); //correct email will make error = false
       });
     }); //suite#1.2 ends
