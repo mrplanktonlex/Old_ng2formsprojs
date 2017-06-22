@@ -1,0 +1,26 @@
+<form (ngSubmit) = "myOnSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="">Username:</label>
+        <input class="form-control" type="text" placeholder="enter username"
+        ngModel name="uname"  required
+        ><br>
+        <label for="">Email:</label>
+        <input class="form-control" type="text" placeholder="enter email"
+        ngModel name="uemail" required email
+        #x="ngModel"
+        ><br>
+        <div *ngIf="!x.valid">
+          <span class="help-block">Email is not valid</span>
+        </div>
+        <br>
+        <select class="form-control select_reduce_width"
+        name="ugender" id="ugender"
+        [ngModel] = default_gender        <<<<==============
+        >
+          <option value="nothing"></option>
+          <option value="umale">Male</option>
+          <option value="ufemale">Female</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+</form>
