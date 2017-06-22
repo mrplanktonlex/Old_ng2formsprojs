@@ -1,0 +1,28 @@
+<form (ngSubmit) = "myOnSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="">Username:</label>
+        <input
+        class="form-control"
+        type="text"
+        placeholder="enter username"
+        ngModel
+        name="uname"
+        required        <!-- NOTICE -->
+        ><br>
+        <label for="">Email:</label>
+        <input class="form-control" type="text" placeholder="enter email"
+        ngModel
+        name="uemail"
+        required        <!-- NOTICE -->
+        email           <!-- NOTICE --> 
+        ><br>
+        <select class="form-control select_reduce_width"
+        ngModel
+        name="ugender" id="ugender">
+          <option value=""></option>
+          <option value="umale">Male</option>
+          <option value="ufemale">Female</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+</form>
