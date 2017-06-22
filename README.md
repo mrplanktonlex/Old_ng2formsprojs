@@ -8,6 +8,7 @@ ng g c add_product
     "styles": [
             "styles.css",
             "node_modules/bootstrap/dist/css/bootstrap.min.css"
-          ],
+          ]
           
+ ng serve (else bootstrap changes wont be picked up)        
  ---          
