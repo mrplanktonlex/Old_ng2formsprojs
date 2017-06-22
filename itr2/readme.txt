@@ -17,3 +17,4 @@ import {NgForm} from '@angular/forms';
 <form (ngSubmit) = "myOnSubmit()" #f="ngForm"> 
 NOTE:= in html it is ngForm. plz note this. VIMP. in  html it should not be NgForm or ngform or something else, else it will croak
 
+Now, u have a more complete look at the formobj using NgForm + ngForm
