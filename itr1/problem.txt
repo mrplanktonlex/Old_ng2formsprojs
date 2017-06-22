@@ -1,0 +1,18 @@
+when u click submit, the form submits (because of the submit button)
+we need to take control of the form submission
+eg.1. 
+<form (ngSubmit) = "myOnSubmit()">
+
+myOnSubmit(){
+    console.log('submitted');
+  }
+
+THis code wont work without the following in app.module.ts:-
+    import {FormsModule} from '@angular/forms';
+    imports:[
+    ...,
+    FormsModule]
+After u edit, then do ng serve. 
+
+and now myOnSubmit() will be called.
+    
