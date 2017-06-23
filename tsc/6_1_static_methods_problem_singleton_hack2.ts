@@ -1,7 +1,8 @@
 // import * as moment from './node_modules/moment/moment';
 class vehicle{
-  static _instance: vehicle = new vehicle(); //access this as vehicle._instance
+  private static _instance: vehicle = new vehicle(); //access this as vehicle._instance
   //DONT write this as _instance or this._instance, thats just wrong !!!
+  //its private so that instance of class does not have it. see 1_class.ts example.
 
   vroom(){
     console.log(vehicle._instance.xdate);
